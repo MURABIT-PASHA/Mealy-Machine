@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 
+from diagram import DiagramImage
+
 window = Tk()
 window.geometry("750x450")
 window.config(padx=15, pady=15)
@@ -105,6 +107,7 @@ def create_scheme(alphabet, state_number):
                 old_state = new_state
             output_label.config(text="".join(outputs))
             states_label.config(text="".join(states))
+            diagram_image = DiagramImage(diagram, int(state_number))
 
         # Açılır pencere
         new_window = Toplevel(window)
