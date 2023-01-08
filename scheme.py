@@ -1,12 +1,8 @@
-from tkinter import *
-from tkinter import ttk
-import PIL.Image, PIL.ImageTk
-from diagram import DiagramImage
+from diagram import *
 class Scheme:
-    def __init__(self, alphabet:str, state_number:str, master: Tk, main_frame: Frame):
+    def __init__(self, alphabet:str, state_number:str, main_frame: Frame):
         self.alphabet = alphabet
         self.state_number = int(state_number)
-        self.master = master
         self.main_frame = main_frame
         self.group_list = []
         self.state_list = []
@@ -71,16 +67,7 @@ class Scheme:
         table_button.grid(column=column_amount, row=row_amount)
 
     def _create_diagram(self):
-        DiagramImage(diagram=self._create_table(), number=self.state_number)
-        self._clear_frame()
-        image = PIL.Image.open("mealy.jpg")
-        golden_ratio = (1 + pow(5, 1 / 2)) / 2
-        height = 400
-        width = int(height * golden_ratio)
-        new_image = image.resize((width, height))
-        self.diagram_image = PIL.ImageTk.PhotoImage(new_image)
-        label = Label(master=self.main_frame, image=self.diagram_image)
-        label.pack()
+        DiagramImage(diagram=self._create_table(), number=self.state_number, frame=self.main_frame)
     def _create_table(self)->dict:
         x = 0
         p = 0
