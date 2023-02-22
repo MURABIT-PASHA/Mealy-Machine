@@ -18,9 +18,9 @@ Usage
 
 To run the program, execute the following command:
 
-Copy code
-
-`python main.py`
+```bash
+python main.py
+```
 
 This will open the GUI window. To create a Mealy machine, enter the input alphabet and the number of states in the respective `Entry` widgets and click the "Create Scheme" button. This will generate a grid of `Entry` and `Combobox` widgets, where you can specify the output and next state for each input symbol and each state. When you have finished specifying the state transitions, click the "Create Diagram" button to generate a graphical representation of the Mealy machine. You can test strings by clicking the "Test String" button.
 
