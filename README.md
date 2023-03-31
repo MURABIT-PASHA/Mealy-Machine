@@ -12,6 +12,7 @@ To run this project, you will need to have the following dependencies installed:
 -   Tkinter
 -   CairoSVG
 -   webview
+-   diagrams
 
 Usage
 -----
@@ -57,4 +58,4 @@ This project was developed by [Murabıt Akdoğan](https://murabit-akdogan.me/).
 License
 -------
 
-This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the [MIT license](https://github.com/MURABIT-PASHA/Mealy-Machine/blob/main/LICENSE).
